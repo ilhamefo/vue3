@@ -6,10 +6,10 @@ const showMenu = ref(false);
 const menu = ref();
 
 function handleMenu() {
-  showMenu.value = true;
+  showMenu.value = !showMenu.value;
 
   nextTick(() => {
-    console.log(menu.value.focus);
+    console.log(menu.value.focus());
   });
 }
 </script>
@@ -17,7 +17,9 @@ function handleMenu() {
 <template>
   <div class="flex flex-col bg-[#FBF8F3] min-w-[400px] antialiased font-roboto">
     <!-- navbar -->
-    <nav class="flex items-center justify-between pt-10 p-5 md:p-10 xl:px-40">
+    <nav
+      class="flex items-center justify-between pt-10 p-5 md:p-10 xl:px-40 z-10"
+    >
       <div class="text-blue-500 text-2xl font-black italic">Chirp.</div>
       <div class="flex items-center justify-end relative">
         <div
@@ -133,6 +135,7 @@ function handleMenu() {
 
     <!-- hero -->
     <div
+      :class="[showMenu ? 'blur' : '']"
       class="
         pb-20
         px-5
@@ -272,7 +275,10 @@ function handleMenu() {
     </div>
 
     <!-- body -->
-    <div class="flex flex-col space-y-10 bg-white p-5 md:p-10 xl:px-40">
+    <div
+      class="flex flex-col space-y-10 bg-white p-5 md:p-10 xl:px-40"
+      :class="[showMenu ? 'blur' : '']"
+    >
       <h4 class="text-4xl font-bold md:w-1/2">
         Features that help you Tweet smarter.
       </h4>
@@ -381,7 +387,10 @@ function handleMenu() {
     </div>
 
     <!-- tweet cards -->
-    <div class="bg-[#D7F5F5] flex flex-col p-5 md:p-10 xl:px-40 space-y-10">
+    <div
+      class="bg-[#D7F5F5] flex flex-col p-5 md:p-10 xl:px-40 space-y-10"
+      :class="[showMenu ? 'blur' : '']"
+    >
       <div class="text-4xl font-bold tracking">What our customers say</div>
 
       <div class="grid grid-flow-row xl:grid-cols-3 gap-4">
@@ -538,6 +547,7 @@ function handleMenu() {
 
     <!-- plans section -->
     <div
+      :class="[showMenu ? 'blur' : '']"
       class="
         bg-white
         flex flex-col
@@ -626,6 +636,7 @@ function handleMenu() {
 
     <!-- footer -->
     <footer
+      :class="[showMenu ? 'blur' : '']"
       class="
         flex flex-col
         md:flex-row
