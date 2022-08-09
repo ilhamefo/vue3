@@ -1,4 +1,17 @@
 <script setup>
+import { ref } from "@vue/reactivity";
+import { nextTick } from "@vue/runtime-core";
+
+const showMenu = ref(false);
+const menu = ref();
+
+function handleMenu() {
+  showMenu.value = true;
+
+  nextTick(() => {
+    console.log(menu.value.focus);
+  });
+}
 </script>
 
 <template>
@@ -6,8 +19,50 @@
     <!-- navbar -->
     <nav class="flex items-center justify-between pt-10 p-5 md:p-10 xl:px-40">
       <div class="text-blue-500 text-2xl font-black italic">Chirp.</div>
-      <div class="flex items-center justify-end">
-        <img src="./assets/HamburgerMenu.svg" alt="" class="flex md:hidden" />
+      <div class="flex items-center justify-end relative">
+        <div
+          v-if="showMenu"
+          @focusout="showMenu = false"
+          tabindex="0"
+          ref="menu"
+          class="
+            absolute
+            bg-white
+            md:hidden
+            py-5
+            px-5
+            top-10
+            right-0
+            w-60
+            shadow-2xl
+            rounded-3xl rounded-tr-none
+            border
+            flex flex-col
+          "
+        >
+          <div
+            class="text-xl font-bold hover:bg-[#D7F5F5] py-2 px-2 rounded-xl"
+          >
+            Home
+          </div>
+          <div
+            class="text-xl font-bold hover:bg-[#D7F5F5] py-2 px-2 rounded-xl"
+          >
+            Pricing
+          </div>
+          <div
+            class="text-xl font-bold hover:bg-[#D7F5F5] py-2 px-2 rounded-xl"
+          >
+            FAQ
+          </div>
+        </div>
+        <button @click="handleMenu()">
+          <img
+            src="./assets/HamburgerMenu.svg"
+            alt="Menu Icon"
+            class="flex md:hidden"
+          />
+        </button>
 
         <div
           class="
