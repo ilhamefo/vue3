@@ -1,7 +1,10 @@
-# Vue 3 + Vite
+# Chirp web UI to Vue 3 Practice
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Repositori ini adalah hasil dari projek latihan slicing dari design ke Vue 3
+[Link Challenges](https://www.codewell.cc/challenges/chirp-landing-page--60fc1e36a383e41090a3c71c)
 
-## Recommended IDE Setup
+<video width="320" height="240" controls>
+  <source src="./public/clip.mp4" type="video/mp4">
+</video>
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+live view : 

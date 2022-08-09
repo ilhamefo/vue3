@@ -7,7 +7,7 @@
     <nav class="flex items-center justify-between pt-10 p-5 md:p-10 xl:px-40">
       <div class="text-blue-500 text-2xl font-black italic">Chirp.</div>
       <div class="flex items-center justify-end">
-        <img src="./assets/Hamburger Menu.svg" alt="" class="flex md:hidden" />
+        <img src="./assets/HamburgerMenu.svg" alt="" class="flex md:hidden" />
 
         <div
           class="
@@ -201,7 +201,7 @@
 
       <div class="md:hidden flex xl:flex xl:w-1/3 self-start">
         <img
-          src="./assets/Hero Image (Desktop View).png"
+          src="./assets/HeroImage(DesktopView).png"
           alt="Hero Image (Desktop View)"
           class="min-w-full"
         />
@@ -209,7 +209,7 @@
 
       <div class="hidden md:flex xl:hidden">
         <img
-          src="./assets/Hero Image (Tablet View).png"
+          src="../src/assets/HeroImage(TabletView).png"
           alt="Hero Image (Desktop View)"
           class=""
         />
@@ -359,7 +359,7 @@
 
             <div class="">
               <img
-                src="./assets/Twitter (Blue).svg"
+                src="../src/assets/Twitter(Blue).svg"
                 alt="Twitter"
                 class="w-10 h-10"
               />
@@ -408,7 +408,7 @@
 
             <div class="">
               <img
-                src="./assets/Twitter (Blue).svg"
+                src="../src/assets/Twitter(Blue).svg"
                 alt="Twitter"
                 class="w-10 h-10"
               />
@@ -458,7 +458,7 @@
 
             <div class="">
               <img
-                src="./assets/Twitter (Blue).svg"
+                src="./assets/Twitter(Blue).svg"
                 alt="Twitter"
                 class="w-10 h-10"
               />
@@ -572,8 +572,7 @@
     <!-- footer -->
     <footer
       class="
-        flex 
-        flex-col
+        flex flex-col
         md:flex-row
         items-start
         justify-between
@@ -587,7 +586,7 @@
     >
       <div class="text-blue-500 text-2xl font-black italic">Chirp.</div>
       <div class="flex items-center space-x-3">
-        <img src="./assets/Twitter (Black).svg" alt="Twitter" />
+        <img src="./assets/Twitter(Black).svg" alt="Twitter" />
         <a href="#" class="text-black text-xl">Privacy Policy</a>
         <a href="#" class="text-black text-xl">Terms of Use</a>
       </div>
